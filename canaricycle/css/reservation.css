@@ -1,0 +1,109 @@
+#reservation {
+    z-index: 1;
+    border: solid black;
+    border-radius: 20px;
+    width: 45%;
+    margin: 3% 2% 0 3%;
+    text-align: center;
+    display: none;
+    height: 500px;
+}
+
+/*-----------------------------------------------------------------------------------Titre section------------------------------------------------------------------------------*/
+#reservation h2 {
+    width: 45%;
+    position: relative;
+    left: 5%;
+    top: -7%;
+    padding: 0;
+    background-color: rgba(237,226,225,1);
+}
+
+/*-----------------------------------------------------------------------------------Infos de la stations------------------------------------------------------------------------------*/
+#infosStation {
+    margin-top: -2%;
+    margin-bottom: 5%;
+}
+
+#infosStation h1 {
+    font-size: 1.6em;
+    margin : 0 0 auto 0 
+}
+
+#infosStation p {
+    font-size: 1.3em;
+}
+
+#infosStation em {
+
+    text-decoration: underline;
+    font-style: normal;
+    font-weight: bold;
+}
+input:invalid {
+    border: 1px solid red;
+  }
+
+/*--------------------------------------------------------------------------------Boutons------------------------------------------------------------------------------*/
+
+#resaButton {
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    margin-top: 1%;
+    color: black;
+    background-color: rgba(211, 233, 10, 1);
+    outline: none;
+}
+
+#annulation {
+    display: none;
+    background-color: rgba(211, 233, 10, 1);
+    border-radius: 5px;
+    height: 30px;
+    width:10%;
+    margin: 0% 45% 1% 45%;
+}
+
+/*--------------------------------------------------------------------------------Compteur de la réservation------------------------------------------------------------------------------*/
+#compteurResa {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2%;
+    display:none;
+}
+.temps {
+    text-decoration: underline;
+}
+
+/*--------------------------------------------------------------------------------Messages à l'utilisateur------------------------------------------------------------------------------*/
+.errorMessage {
+    width: 80%;
+    margin: auto;
+    font-size: 1.3em;
+    color: red;
+}
+.champsVide {
+    display:none;
+    color:red;
+}
+.currentResaMessage{
+    width: 80%;
+    margin: auto;
+    font-size: 1.3em;
+    margin-top: 10%;
+    font-weight: bold;
+    color: red;
+}
+#resaExpiree{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2%;
+    display:none;
+}
+#resaAnnulee{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2%;
+    display:none;
+}

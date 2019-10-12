@@ -1,0 +1,389 @@
+@media all and (min-width:1700px) and (max-width:2000px){
+    #presentation_site {
+        margin-top: 7%;
+    }
+    .imageCarte {
+        margin: 0 auto 3% 35%;
+        width: 30%;
+        border-radius: 5%;
+        height:auto
+    }
+    .imageInfos {
+        width: 25%
+    }
+    .carrousel li:nth-child(3) p {
+        bottom: -10%;
+    }
+    .imageResa {
+        width: 25%;
+    }
+    .carrousel li:nth-child(4) p {
+        bottom: -10%;
+    }
+    #map{
+        width:60%
+    }
+    #reservation{
+        width:30%
+    }
+    #reservation h2 {
+        width: 50%;
+    }
+    .timerResa {
+        position: relative;
+        margin: 1% 27.5% auto;
+        width: 45%;
+        opacity: 0.8;
+    }
+}
+
+@media all and (min-width:1600px) and (max-width:1699px){
+    #presentation_site {
+        margin-top: 10%;
+    }
+    .carrousel li:nth-child(3) p {
+        bottom: -10%;
+    }
+    .carrousel li:nth-child(4) p {
+        bottom: -10%;
+    }
+    #reservation h2 {
+        width: 40%;
+    }
+    #infosStation h1 {
+        font-size: 1.7em;
+    }
+    #infosStation p {
+        font-size: 1.5em;
+    }
+    .timerResa {
+        position: relative;
+        margin: 1% 25% auto;
+        width: 50%;
+        opacity: 0.8;
+    }
+}
+
+@media all and (max-width:1200px) {
+    .imageInfos {
+        width: 360px;
+        height: 239.083px;
+    }
+    .imageResa {
+        width: 360px;
+        height: 239.083px;
+    }
+    .carrousel li:nth-child(1) p {
+        font-size: 1.8em;
+    }
+    .carrousel li:nth-child(2) p {
+        width:70%;
+        font-size: 1.8em;
+    }
+    .carrousel li:nth-child(3) p {
+        font-size: 1.8em;
+    }
+    .carrousel li:nth-child(4) p {
+        font-size: 1.8em;
+    }
+    .carrousel li:nth-child(5) p {
+        font-size: 1.8em;
+        margin-top: 5%;
+    }
+    #infosStation h1 {
+        font-size: 1.4em;
+    }
+    #infosStation p {
+        font-size: 1.1em;
+    }
+}
+
+@media all and (max-width:1000px) {
+    nav a{
+        font-size: 2.5em
+    }
+    .timerResa {
+        margin-top: 8%;
+    }
+    .imageCarte {
+        margin-left: 25%;
+        width: 495px;
+        height: 430px;
+    }
+}
+
+@media all and (max-width:850px) {
+    #presentation_site {
+        justify-content: center;
+    }
+    .carrousel li:nth-child(1) h1 {
+        text-align: center;
+    }
+    .carrousel li:nth-child(1) p {
+        text-align: center;
+        margin: 0 0 10%;
+        width: 80%;
+    }
+    .imageCarte{
+        margin-left: 20%
+    }
+    .timerResa {
+        width: 80%;
+        margin: 10% 10% auto;
+    }
+    #bikeStations {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #map {
+        width: 90%;
+        margin: 3% auto 5% auto;
+    }
+    #reservation {
+        width: 90%;
+    }
+    #infosStation h1 {
+        font-size: 1.6em;
+    }
+    #infosStation p {
+        font-size: 1.3em;
+    }
+}
+
+@media all and (max-width:750px) {
+    .carrousel li:nth-child(1) h1 {
+        font-size: 4em;
+    }
+    .imageCarte {
+        margin: 5% auto auto 22%;
+        width: 415px;
+        height: 360px;
+    }
+    .imageInfos {
+        width: 45%;
+        height: 239.083px;
+    }
+    .imageResa {
+        width: 45%;
+        height: 239.083px;
+    }
+    .carrousel li:nth-child(5) p {
+        margin-top: 10%;
+    }
+    #infosStation h1 {
+        font-size: 1.3em;
+    }
+    #infosStation p {
+        font-size: 1em;
+    }
+}
+
+@media all and (max-width:600px) {
+    nav a {
+        font-size: 2em
+    }
+    #presentation_site {
+        margin-top: 25%;
+    }
+    .carrousel li:nth-child(1) h1 {
+        font-size: 2.8em;
+    }
+    .carrousel li:nth-child(1) .logo {
+        width: 100px;
+        height: 100px;
+    }
+    .imageCarte {
+        width: 345px;
+        height: 300px;
+    }
+    .carrousel li:nth-child(2) p {
+        font-size: 1.5em;
+        margin-top: 15%;
+    }
+    .carrousel li:nth-child(3) p {
+        font-size: 1.5em;
+    }
+    .carrousel li:nth-child(4) p {
+        font-size: 1.5em;
+    }
+    .carrousel li:nth-child(5) p {
+        font-size: 1.5em;
+    }
+    #map {
+        height: 400px;
+    }
+    .marker {
+        width: 50px;
+        height: 50px;
+    }
+    #annulation {
+        width:20%;
+        margin: 0% 40% 5% 40%;
+    }
+}
+
+@media all and (max-width:500px) {
+    .carrousel li {
+        height: 500px;
+    }
+
+    .imageCarte {
+        margin-left: 16%;
+    }
+    .carrousel li:nth-child(2) p {
+        margin-top: 10%;
+    }
+    .carrousel li:nth-child(5) p {
+        margin-top: 20%;
+    }
+    .timerResa {
+        width: 90%;
+        margin: 10% 5% auto;
+    }
+    .fleche_gauche {
+        top: 300px;
+    }
+    .fleche_droite {
+        top: 300px;
+    }
+    #diaporama .pause {
+        top: 300px;
+    }
+    #diaporama #timeline {
+        top: 593px;
+    }
+    #map {
+        height: 300px;
+    }
+    #reservation h2 {
+        margin-bottom: 0
+    }
+    #infosStation h1 {
+        font-size: 1.2em;
+    }
+    #signature{
+        flex-direction: column
+    }
+    #canvas{
+        margin: 0 auto 0 auto;
+        border-radius: 10px 10px 0 0;
+    }
+    #confirmation {
+        width: 250px;
+        height:50px;
+        border-radius: 0 0 10px 10px ;
+        margin: 0 auto 2% auto;
+    }
+}
+
+@media all and (max-width:450px) {
+    .imageCarte {
+        margin-left: 12%;
+    }
+}
+
+
+@media all and (max-width:400px) {
+    nav a{
+        font-size: 1.8em
+    }
+    .carrousel li {
+        height: 400px;
+    }
+    #presentation_site {
+        margin-top: 20%;
+    }
+    .carrousel li:nth-child(1) h1 {
+        font-size: 2.2em;
+    }
+    .carrousel li:nth-child(1) .logo {
+        width: 80px;
+        height: 80px;
+    }
+    .carrousel li:nth-child(1) p {
+        font-size: 1.5em;
+    }
+    .imageCarte {
+        margin:1% auto auto 15%;
+        width: 285px;
+        height: 250px;
+    }
+    .carrousel li:nth-child(2) p {
+        font-size: 1.2em;
+        margin-top: 10%;
+    }
+    .imageInfos {
+        height: 170px;
+    }
+    .imageResa {
+        height: 170px;
+    }
+    .carrousel li:nth-child(3) p {
+        font-size: 1.2em;
+    }
+    .carrousel li:nth-child(4) p {
+        font-size: 1.2em;
+    }
+    .carrousel li:nth-child(5) p {
+        font-size: 1.2em;
+    }
+    .fleche_gauche {
+        top: 250px;
+    }
+    .fleche_droite {
+        top: 250px;
+    }
+    #diaporama .pause {
+        top: 250px;
+    }
+    #diaporama #timeline {
+        top: 493px;
+    }
+    #infosStation p {
+        font-size: 0.9em;
+    }
+}
+
+@media all and (max-width:350px) {
+    #presentation_site {
+        margin-top: 40%;
+    }
+    .carrousel li:nth-child(1) h1 {
+        font-size: 2em;
+    }
+    .carrousel li:nth-child(1) .logo {
+        width: 80px;
+        height: 80px;
+    }
+    .carrousel li:nth-child(1) p {
+        font-size: 1.5em;
+    }
+    .imageCarte {
+        margin-left: 8%;
+    }
+    .carrousel li:nth-child(2) p {
+        font-size: 1em;
+        margin-top: 10%;
+    }
+    .imageInfos {
+        width: 50%;
+        height: 170px;
+    }
+    .imageResa {
+        width: 50%;
+        height: 170px;
+    }
+    .carrousel li:nth-child(3) p {
+        font-size: 1em;
+    }
+    .carrousel li:nth-child(4) p {
+        font-size: 1em;
+    }
+    .carrousel li:nth-child(5) p {
+        font-size: 1em;
+    }
+    #map {
+        height: 250px;
+    }
+}

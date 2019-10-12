@@ -1,0 +1,252 @@
+/*------------------------------------------------------------------------------Mise en forme carrousel------------------------------------------------------------------------------*/
+.carrousel {
+    display: flex;
+    width: 500%;
+    margin: 0;
+    padding: 0;
+}
+
+#diaporama {
+    width: 100%;
+    z-index: 1;
+    width:100%
+}
+
+.carrousel li {
+    width: 100%;
+    list-style-type: none;
+    height: 600px;
+    margin: 0;
+}
+
+/*------------------------------------------------------------------------------Contenu premiere slide------------------------------------------------------------------------------*/
+.carrousel li:nth-child(1) {
+    background-image: url("https://i.pinimg.com/originals/d4/6f/50/d46f505721d139da1f690671fc99fa3f.png");
+    background-size: 100% 100%;
+}
+
+#presentation_site {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 12%;
+    padding-left: 1%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    padding-top: 2.5%;
+    margin-right: 1%;
+}
+
+.carrousel li:nth-child(1) h1 {
+    text-align: left;
+    color: white;
+    font-size: 5em;
+    text-decoration: underline;
+}
+
+.carrousel li:nth-child(1) p {
+    text-align: left;
+    padding-left: 12%;
+    padding-top: 0;
+    margin-top: 2%;
+    color: rgba(211, 233, 10, 1);
+    font-size: 2.5vw;
+    font-weight: bold
+}
+
+/*------------------------------------------------------------------------------Contenu deuxieme slide------------------------------------------------------------------------------*/
+.carrousel li:nth-child(2) {
+    background-image: url("https://s1.qwant.com/thumbr/0x380/a/8/d857a545a3eaf8fbb9e6ce9333bd9b9411e06cc586ce0e124ccf0acee47bc2/cityscape_city_bicycle_street_sunlight_vehicle_urban-256300.jpg!d.jpg?u=https%3A%2F%2Fc.wallhere.com%2Fphotos%2Fa5%2F1f%2Fcityscape_city_bicycle_street_sunlight_vehicle_urban-256300.jpg%21d&q=0&b=1&p=0&a=1");
+    background-size: 100% 100%;
+}
+
+.imageCarte {
+    position: relative;
+    margin: 0 auto 3% 32%;
+    border-radius: 100%;
+    width: 550px;
+    height: 480px;
+    opacity: 0.85;
+}
+
+.carrousel li:nth-child(2) p {
+    background-color: rgba(105, 105, 102, 0.768);
+    border-radius: 30px;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+    font-size: 2.5vw;
+    margin: 1% auto;
+    color: rgba(211, 233, 10, 1);
+    width: 65%;
+}
+
+/*------------------------------------------------------------------------------Contenu troisieme slide------------------------------------------------------------------------------*/
+.carrousel li:nth-child(3) {
+    background-image: url("https://s1.qwant.com/thumbr/0x380/2/c/29b0236facf316cc15ec14a5e1a9a0959f1fca5d0e12c8bab6d28e8e6cdf1d/China_Internet_OFO_shared_bicycle_photos_2560x1600.jpg?u=https%3A%2F%2Fwww.10wallpaper.com%2Fwallpaper%2F2560x1600%2F1808%2FChina_Internet_OFO_shared_bicycle_photos_2560x1600.jpg&q=0&b=1&p=0&a=1");
+    background-size: 100% 100%;
+}
+
+#imagesInfosStation {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 8%;
+}
+
+.imageInfos {
+    position: relative;
+    width: 30%;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+.carrousel li:nth-child(3) p {
+    background-color: rgba(105, 105, 102, 0.768);
+    border-radius: 30px;
+    padding: 15px;
+    position: relative;
+    bottom: -20%;
+    text-align: center;
+    font-size: 2.5vw;
+    margin: 1% auto 2%;
+    width: 80%;
+    color: rgba(211, 233, 10, 1);
+}
+
+/*------------------------------------------------------------------------------Contenu quatrieme slide------------------------------------------------------------------------------*/
+.carrousel li:nth-child(4) {
+    background-image: url("http://blog.wikipme.fr/wp-content/uploads/2018/03/dims.jpeg");
+    background-size: 100% 100%;
+}
+
+#imagesReservation {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 8%;
+}
+
+.imageResa {
+    position: relative;
+    width: 30%;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+.carrousel li:nth-child(4) p {
+    background-color: rgba(105, 105, 102, 0.768);
+    border-radius: 30px;
+    padding: 15px;
+    position: relative;
+    bottom: -20%;
+    text-align: center;
+    font-size: 2.5vw;
+    margin: 1% auto 2%;
+    width: 70%;
+    color: rgba(211, 233, 10, 1);
+}
+
+/*------------------------------------------------------------------------------Contenu cinquieme slide------------------------------------------------------------------------------*/
+.carrousel li:nth-child(5) {
+    background-image: url("https://i.f1g.fr/media/figaro/orig/2017/10/09/XVM81a91876-93ff-11e8-80ac-41efdd7c4097.jpg");
+    background-size: 100% 100%;
+}
+
+.timerResa {
+    position: relative;
+    margin: 1% 20% auto;
+    width: 60%;
+    opacity: 0.9;
+}
+
+.carrousel li:nth-child(5) p {
+    background-color: rgba(105, 105, 102, 0.768);
+    border-radius: 30px;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+    font-size: 2.5vw;
+    width: 80%;
+    margin: 1% auto 2%;
+    color: rgba(211, 233, 10, 1);
+}
+
+/*------------------------------------------------------------------------------------------Boutons------------------------------------------------------------------------------*/
+.fleche_gauche {
+    position: absolute;
+    top: 375px;
+    left: 0;
+    color: black;
+    border: none;
+    border-radius: 0 100px 100px 0;
+    background-color: rgba(211, 233, 10, 0.6);
+    padding: 25px 25px 25px 5px;
+    visibility: hidden;
+    opacity: 0.8;
+}
+
+.fleche_droite {
+    position: absolute;
+    right: 0;
+    top: 375px;
+    border: none;
+    color: black;
+    border-radius: 100px 0 0 100px;
+    background-color: rgba(211, 233, 10, 0.6);
+    padding: 25px 5px 25px 25px;
+    visibility: hidden;
+    opacity: 0.8;
+}
+
+#diaporama .pause {
+    position: absolute;
+    left: 48%;
+    top: 375px;
+    border: none;
+    color: black;
+    border-radius: 100px;
+    background-color: rgba(211, 233, 10, 0.6);
+    padding: 25px;
+    visibility: hidden;
+    opacity: 0.8;
+}
+
+#diaporama:hover .fleche_droite {
+    visibility: visible;
+}
+
+#diaporama:hover .fleche_gauche {
+    visibility: visible;
+}
+
+#diaporama:hover .pause {
+    visibility: visible;
+}
+
+#diaporama:hover .play {
+    display: none;
+}
+
+/*------------------------------------------------------------------------------------------Pagination------------------------------------------------------------------------------*/
+#diaporama #timeline {
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    left: 0;
+    top: 692px;
+    background-color: rgba(235, 235, 226, 0.775);
+    margin: 0;
+    padding: 0;
+}
+
+#diaporama #timeline #moving_bloc {
+    width: 20%;
+    background-color: rgba(105, 105, 102, 0.768);
+    margin: 0;
+    height: 100%;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="Descritpion" content="Site de réservation en ligne de vélos à Nantes"/>
+        <meta name="Author" content="Benjamin Monteiro Da Silva"/>
+        <meta name="keywords" content="CanariCycle, Vélo, Réservation, Nantes"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link rel="icon" type="image/png" href="images/canary-logo-circle-only.png" />
+        <title>CanariCycle.com</title>
+        <!--Chargement des fichiers css-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+        <link rel="stylesheet" href="./css/main.css"/>
+        <link rel="stylesheet" href="./css/carrousel.css"/>
+        <link rel="stylesheet" href="./css/api.css"/>
+        <link rel="stylesheet" href="./css/reservation.css"/>
+        <link rel="stylesheet" href="./css/canvas.css"/>
+        <link rel="stylesheet" href="./css/responsive.css"/>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="#map">Réserver un vélo</a>
+            </nav>
+        </header>
+
+        <!--Section du carrousel-->
+        <section id="diaporama">
+            <ul class="carrousel">
+                <!--Contenu des différentes slides-->
+                <!--Slide 1-->
+                <li>
+                    <div id="presentation_site">
+                        <img class="logo" src="images/canary-logo-circle-only.png" alt="Le logo du site, un canari">
+                        <h1>CanariCycle</h1>
+                    </div>
+                    <p>Avec CanariCycle, réservez un vélo à Nantes en toute simplicité</p>
+                </li>
+                <!--Slide 2-->
+                <li>
+                    <p>Trouvez la station la plus proche sur la carte de la ville</p>
+                    <img class="imageCarte" src="images/carte.png" alt="Un morceau de la carte de la ville de Nantes avec les icones des stations de vélos">
+                </li>
+                <!--Slide 3-->
+                <li>
+                    <div id="imagesInfosStation">
+                        <img class="imageInfos" src="images/carte_popup.png" alt="Un morceau de la carte de la ville de Nantes avec les icones des stations de vélos et un popup avec le nom de la station sélectionnée">
+                        <img class="imageInfos" src="images/infos_station.png" alt="Encart avec les informations de la station sélectionnée">
+                    </div>
+                    <p>Cliquez sur une station pour obtenir son adresse, le nombre de vélos disponibles etc...</p>
+                </li>
+                <!--Slide 4-->
+                <li>
+                    <div id="imagesReservation">
+                        <img class="imageResa" src="images/reservation_form.png" alt="Formulaire de réservation">
+                        <img class="imageResa" src="images/canvas.png" alt="Espace de signature pour la confirmation de la réservation">
+                    </div>
+                    <p>Renseignez vos noms et prénoms et signez pour confirmer la réservation</p>
+                </li>
+                <!--Slide 5-->
+                <li>
+                    <img class="timerResa" src="images/timer.png" alt="Un vélo est réservé pendant 20 minutes">
+                    <p>Un vélo est réservé à votre nom pour une durée de 20min. A vous la liberté!!!</p>
+                </li>
+            </ul>
+        </section>
+
+        <!--Section carte et réservation-->
+        <section id="bikeStations">
+            <div id="map"></div>
+            <!--Informations relatives à la station sélectionnée-->
+            <div id="reservation">
+                <h2>Détails de la station</h2>
+                <div id="infosStation">
+                    <h1><em>Station</em>: <span>{station_nom}</span></h1>
+                    <p><span>{station_adresse}</span></p>
+                    <p><em>Statut</em>: <span>{station_statut}</span></p>
+                    <p><em>Nombre d'emplacements libres</em>: <span>{station_free_spaces}</span></p>
+                    <p><em>Nombre de vélos disponibles</em>: <span>{station_free_bikes}</span></p>
+                </div>
+                <p class="errorMessage"><strong>Réservation Impossible :</strong><br />Il ne reste plus de vélos disponible et/ou la station est fermée</p>
+                <p class="currentResaMessage"> Vous avez déjà une réservation en cours.<br />Veuillez l'annuler pour réserver un autre vélo</p>
+                <!--Espace de signature-->
+                <p class="signatureCanvas">*Signez ici : </p>
+                <div id="signature">
+                    <canvas id="canvas" width="250"></canvas>
+                    <button id="confirmation">Confirmer</button>
+                </div>
+                <!--Formulaire de réservation-->
+                <p class="champsVide">Veuillez remplir tous les champs du formulaire</p>
+                <form>
+                    <p>
+                        <label for="nom">*Nom </label> : <input type="text" name="nom" id="nom" required="" >
+                    </p>
+                    <p>
+                        <label for="prenom">*Prénom</label> : <input type="text" name="prenom" id="prenom" required="" >
+                    </p>
+                    <input id="resaButton" type="button" value="Réserver">
+                </form>
+            </div>
+        </section>
+
+        <!--Section des infos de réservation-->
+        <section>
+            <div id="compteurResa">
+                <p>Vélo réservé à la station <span id="stationResa">{Station}</span> par <span id="userId">{prenom} {nom}</span></p>
+                <p><span class="temps">Temps restant avant expiration: </span><br /><span id="min">20 </span> min <span id="sec">00 </span> sec</p>
+            </div>
+            <p id="resaExpiree">Votre réservation a expirée</p>
+            <p id="resaAnnulee">Votre réservation a bien été annulée</p>
+            <button id="annulation">Annuler</button>
+        </section>
+
+        <!--Légende de la carte-->
+        <section id="legende">
+            <div>
+                <img class="marker" src="images/greenMarker.png" alt="marqueur vert"/>
+                <p>Plus de 5 vélos disponibles</p>
+            </div>
+            <div>
+                <img class="marker" src="images/orangeMarker.png" alt ="marqueur orange"/>
+                <p>De 1 à 5 vélos disponibles</p>
+            </div>
+            <div>
+                <img class="marker" src="images/redMarker.png" alt="marqueur rouge"/>
+                <p>Aucun vélo disponible ou station fermée</p>
+            </div>
+        </section>
+        <!--Chargement des scripts-->
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" data-auto-replace-svg="nest"></script>
+        <script src="./js/Carrousel.js"></script>
+        <script src="./js/Api.js"></script>
+        <script src ="./js/Map.js"></script>
+        <script src="./js/Reservation.js"></script>
+        <script src="./js/Canvas.js"></script>
+        <script src="./js/Timer.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+#signature {
+    display: flex;
+}
+
+#canvas {
+    display: none;
+    background-color: white;
+    position: relative;
+    margin: 0 0 2% auto;
+    width: 250px;
+    height: 150px;
+    border-radius: 10px 0 0 10px;
+}
+.signatureCanvas {
+    display: none;
+}
+
+/*--------------------------------------------------------------------------------Bouton confirmation------------------------------------------------------------------------------*/
+#confirmation {
+    display: none;
+    width: 100px;
+    height: 150px;
+    margin: 0 auto 2% 0;
+    background-color: rgba(211, 233, 10, 1);
+    border-radius: 0 10px 10px 0;
+}
+
+#confirmation a{
+    color:black;
+}

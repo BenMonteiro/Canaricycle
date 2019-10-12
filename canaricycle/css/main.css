@@ -1,0 +1,44 @@
+
+body {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffff0a+38,ffff0a+38,ede2e1+57 */
+    background: rgb(211,233,10); /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  rgba(211,233,10,1) 20%, rgba(211,233,10,1) 20%, rgba(237,226,225,1) 47%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(211,233,10,1) 20%,rgba(211,233,10,1) 20%,rgba(237,226,225,1) 47%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(211,233,10,1) 20%,rgba(211,233,10,1) 20%,rgba(237,226,225,1) 47%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff0a', endColorstr='#ede2e1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    overflow-x : hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a, button {
+    outline: none;
+    text-decoration: none;
+}
+
+header {
+    height: 100px;
+    display:flex;
+    position:relative
+}
+
+nav {
+    position:absolute;
+    top:30%;
+    height:auto;
+    width:100%;
+    text-align: center
+}
+
+nav a {
+    color:  rgb(9, 69, 8);
+    font-size: 3em;
+    font-weight: bold;
+}
+
+nav a:hover {
+    opacity: 0.5;
+    text-decoration: underline;
+}
